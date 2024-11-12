@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabler into</title>
+</head>
+<body>
+    <div id="output"></div>
+    <!-- 
+    !!!!VIKTIG!!!!
+    Ikke riktig bruk av <button onclick="funksjon">.
+    Dette er riktig bruk <button onclick="funksjon()">.
+    Hvis ikke gjenkjennes den ikke som en funksjon!
+    -->
+    <button onclick="setNum68()">Set number to 68</button>
+    <button onclick="setNum981()">Set number to 981</button>
+
+</body>
+<script>
+    // var number = 17; //int
+    // var floatnumber = 17.7; //kommaseparert
+    // var text = "tilfeldig tekst"; //string
+    // var enkeltTegn = "a"; //char
+    // var booleans = true; // booleans kan være false og true
+
+    let outputDiv = document.getElementById('output');
+    let numbToShow = 0;
+
+    function setNum68(){
+        numbToShow = 68;
+        outputDiv.innerHTML = numbToShow;
+
+    }
+
+    function setNum981(){
+        numbToShow = 981;
+        outputDiv.innerHTML = numbToShow;
+    }
+
+</script>
+</html>
