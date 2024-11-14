@@ -6,15 +6,15 @@
     <title>Introduksjon av meg</title>
     <style>
         #body{
-            background-color: #dddd;
+            background-color: #ecececdd;
         }
         #container1 {
-            background-color: #eae8e8;
-            color: #9a9a9a;
+            background-color: #ffffffdd;
+            color: #515151;
             padding: 20px;
-            border: solid #eae8e8 30px;
+            border: solid #d9d8d8dd 2px; 
             border-radius: 20px;
-            margin: 20px;
+            margin: 50px;
             width: 500px;
             height: auto;
         }
@@ -36,23 +36,23 @@
           <ul>Hobby 1</ul>
           <ul>Hobby 1</ul>
           <hr>
-          <button onclick="bgLight()">Light side</button>
-          <button onclick="bgDark()">Dark side</button>
+          <button onclick="bgLight()" style="width: 100px; height: 40px; border-radius: 10px; background-color: chartreuse; box-shadow: 20px ;">Bright mode</button>
+          <button onclick="bgDark()" style="width: 100px; height: 40px; border-radius: 10px; background-color: chartreuse;">Dark mode</button>
           
-        </div>
+         </div>
 </body>
 </html>
 
 <script>
     function bgLight(){
-        document.getElementById('body').style.backgroundColor = "#dddd";
-        document.getElementById('container1').style.border = "solid #eae8e8 30px"
-        document.getElementById('container1').style.backgroundColor = "#eae8e8"
+        document.getElementById('body').style.backgroundColor = "#ffffffdd";
+        document.getElementById('container1').style.border = "solid #d9d8d8dd 2px"
+        document.getElementById('container1').style.backgroundColor = "#d9d8d8dd"
     }
     function bgDark(){
         document.getElementById('body').style.backgroundColor = "#2e2e2e"
-        document.getElementById('container1').style.border = "solid #3b3b3b 30px"
-        document.getElementById('container1').style.backgroundColor = "#3b3b3b"
+        document.getElementById('container1').style.border = "solid #3b3b3b 2px"
+        document.getElementById('container1').style.backgroundColor = "#9b9b9b"
     }
 </script>
 
