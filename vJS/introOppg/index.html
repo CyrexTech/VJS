@@ -5,7 +5,58 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Introduksjon av meg</title>
     <style>
-        .container1 {
+        #body{
+            background-color: #dddd;
+        }
+        #container1 {
+            background-color: #eae8e8;
+            color: #9a9a9a;
+            padding: 20px;
+            border: solid #eae8e8 30px;
+            border-radius: 20px;
+            margin: 20px;
+            width: 500px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div id="container1">
+    <h2>Introduksjon av meg</h2>
+    <hr>
+    <p>Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,
+         Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,
+          Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,</p>
+          <hr>
+          <ul>Hobby 1</ul>
+          <ul>Hobby 1</ul>
+          <ul>Hobby 1</ul>
+          <ul>Hobby 1</ul>
+          <ul>Hobby 1</ul>
+          <ul>Hobby 1</ul>
+          <hr>
+          <button onclick="bgLight()">Light side</button>
+          <button onclick="bgDark()">Dark side</button>
+          
+        </div>
+</body>
+</html>
+
+<script>
+    function bgLight(){
+        document.getElementById('body').style.backgroundColor = "#dddd";
+        document.getElementById('container1').style.border = "solid #eae8e8 30px"
+        document.getElementById('container1').style.backgroundColor = "#eae8e8"
+    }
+    function bgDark(){
+        document.getElementById('body').style.backgroundColor = "#2e2e2e"
+        document.getElementById('container1').style.border = "solid #3b3b3b 30px"
+        document.getElementById('container1').style.backgroundColor = "#3b3b3b"
+    }
+</script>
+
+<!--        #container1 {
             background-color: #3e3e3e;
             color: #9a9a9a;
             padding: 20px;
@@ -14,32 +65,7 @@
             margin: 20px;
             width: 500px;
             height: auto;
-        }
-
-    </style>
-</head>
-<body>
-    <div class="container1">
-    <h2>Introduksjon av meg</h2>
-    <hr>
-    <p>Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,
-         Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,
-          Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,</p>
-          <br>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <br>
-          <hr>
-          <button onclick="changebackground()">Endre Background Color</button>
-          
-        </div>
-</body>
-</html>
-
+        } -->
 
 <!-- 
 en introduksjonstekst om deg,
