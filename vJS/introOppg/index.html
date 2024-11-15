@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Introduksjon av meg</title>
     <style>
-        #body{
-            background-color: #ecececdd;
+        #body {
+            background-color: #d9d8d8dd;
         }
         #container1 {
             background-color: #ffffffdd;
-            color: #515151;
+            color: black;
             padding: 20px;
-            border: solid #d9d8d8dd 2px; 
+            border: solid #ffffffdd 2px; 
             border-radius: 20px;
             margin: 50px;
-            width: 500px;
+            width: 800px;
             height: auto;
+        }
+        #bilde {
+            width: 250px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            align-items: flex-start;
         }
 
     </style>
@@ -25,34 +32,34 @@
     <div id="container1">
     <h2>Introduksjon av meg</h2>
     <hr>
-    <p>Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,
-         Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,
-          Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim, Jeg heter Joakim,</p>
+    <p>Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen. Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen. Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen. Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen.</p>
           <hr>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
-          <ul>Hobby 1</ul>
+          <h2>Hobbyer</h2>
+          <br>
+          <ul>Lage og spise god mat.</ul>
+          <ul>Gjøre hyggelige ting med samboeren min.</ul>
+          <ul>Programmere</ul>
+          <ul>Utfordre meg selv innenfor ulike felt.</ul>
+          <img id="bilde" src="https://ociacc.com/wp-content/uploads/2019/03/blank-profile-picture-973460_1280-1030x1030.png">
           <hr>
           <button onclick="bgLight()" style="width: 100px; height: 40px; border-radius: 10px; background-color: chartreuse; box-shadow: 20px ;">Bright mode</button>
           <button onclick="bgDark()" style="width: 100px; height: 40px; border-radius: 10px; background-color: chartreuse;">Dark mode</button>
-          
          </div>
 </body>
 </html>
 
 <script>
     function bgLight(){
-        document.getElementById('body').style.backgroundColor = "#ffffffdd";
-        document.getElementById('container1').style.border = "solid #d9d8d8dd 2px"
-        document.getElementById('container1').style.backgroundColor = "#d9d8d8dd"
+        document.getElementById('body').style.backgroundColor = "#d9d8d8dd";
+        document.getElementById('container1').style.border = "solid #ffffffdd 2px"
+        document.getElementById('container1').style.backgroundColor = "#ffffffdd"
+        document.getElementById('container1').style.color = "black"
     }
     function bgDark(){
         document.getElementById('body').style.backgroundColor = "#2e2e2e"
         document.getElementById('container1').style.border = "solid #3b3b3b 2px"
         document.getElementById('container1').style.backgroundColor = "#9b9b9b"
+        document.getElementById('container1').style.color = "white"
     }
 </script>
 
