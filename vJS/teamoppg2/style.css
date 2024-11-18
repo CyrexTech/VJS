@@ -1,0 +1,47 @@
+*{
+    background-color: black;
+    color: white;
+    text-align: center;
+    }
+    
+    .inventory-bkground{
+    
+    
+        /* background stylings */
+        height: 550px;
+        width: 550px;
+        background-color: gray;
+        border-color: white;
+        border-style:solid;
+        border-width: 10px;
+    
+        /* griddification */
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    
+        /* positioning */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    .gridline{
+        width: 11px;
+        height: 11px;
+    }
+    
+    
+    .item{
+        /* positioning */
+        justify-self: center;
+        align-self: center;
+    
+        /* dimentions */
+        height: 20px;
+        width: 20px;
+        border-style: groove;
+        background-color: darkgreen;
+    }
