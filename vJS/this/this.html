@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <div class="pink box" onclick="changeColor(this)"></div>
+    <div class="red box" onclick="changeColor(this)"></div>
+    <div class="blue box" onclick="changeColor(this)"></div>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="javascript.js"></script>
+    <script>
+        function changeColor(element){
+            element.style.backgroundColor = "green"
+            element.innerHTML = "Hele livet ditt"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Status</title>
+</head>
+<body>
+    <div class="hungrySetting" onclick="changeHungryStatus()">Change hungry status</div>
+    <div id="hungryText">Jeg er sulten!</div>
+    <script>
+        let hungry = false;
+        let hasFood = false;
+        let timeToEat = 1400;
+        let timeNow = 1300;
+
+        function changeHungryStatus(){
+            hungry = !hungry;
+            changeHungryText()
+        }
+        function changeHungryText(){
+            if(hungry == true){
+                document.getElementById("hungryText").innerHTML = 'Jeg er sulten!'
+                if(hasFood && timeNow >= timeToEat){
+                    eat();
+                }
+                else if(hasFood && timeNow < timeToEat){
+                    notTime();
+                }
+                else{
+                    starve();
+                }
+            }else{
+                document.getElementById("hungryText").innerHTML = 'Jeg er ikke sulten!'
+            }
+        }
+        function eat(){
+            document.getElementById('hungryText').innerHTML += 'Jeg har mat, så jeg spiser.'
+
+        }
+        function notTime(){
+            document.getElementById('hungryText').innerHTML += 'Det er ikke tiden for å spise nå!'
+        }
+        function starve(){
+            document.getElementById('hungryText').innerHTML += 'Jeg har ikke mat :(. Jeg må sulte'
+        }
+    </script>
+    <style>
+        .hungrySetting{
+            height: 20px;
+            width: 200px;
+            background-color: lightblue;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</body>
+</html>

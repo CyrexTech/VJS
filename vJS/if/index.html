@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .result{
+        width: 250px;
+        height: 100px;
+        background-color: gray;
+    }
+</style>
+<body>
+    <div class="result" id="resultBox">Result:</div>
+    <script>
+        let numberOne = 18;
+        let numberTwo = 16;
+
+        let textNumber = "30"
+        check()
+        function check(){
+            OrCheck();
+        }
+        function setTextToTrue(){
+            document.getElementById('resultBox').innerHTML += true;
+        }
+        function setTextToFalse(){
+            document.getElementById('resultBox').innerHTML += false;
+        }
+
+        function OrCheck(){
+            if(numberOne > 50 || numberOne > numberTwo){
+                setTextToTrue()
+            }
+            else{
+                setTextToFalse()
+            }
+        }
+        function AndCheck(){
+            if(numberOne < 20 && numberOne > numberTwo){
+                setTextToTrue()
+            }
+            else{
+                setTextToFalse()
+            }
+        }        
+        function LargerThan(){
+            if(numberOne >= numberTwo){
+                setTextToTrue()
+            }
+            else{
+                setTextToFalse()
+            }
+        }
+        function LessThan(){
+            if(numberOne <= numberTwo){
+                setTextToTrue()
+            }
+            else{
+                setTextToFalse()
+            }
+        }
+        function EqualTo(){
+            if(numberOne == textNumber){
+                setTextToTrue()
+            }
+            else{
+                setTextToFalse()
+            }
+        }
+        function NotEqualTo(){
+            if(numberOne != numberTwo){
+                setTextToTrue()
+            }
+            else{
+                setTextToFalse()
+            }
+        }
+    </script>
+</body>
+</html>
