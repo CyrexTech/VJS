@@ -12,4 +12,4 @@ function updateView(){
         </div>
     </div>
     `
-}
+    }

@@ -2,7 +2,8 @@ const app = document.getElementById('app');
 
 const model = {
     app: {
-        loggedInUser: null,
+        isUserRegistered: null,
+        isUserLoggedIn: null,
         darkMode: true,
     },
     input: {

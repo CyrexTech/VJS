@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC - Adjektiv historie</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        let name = "Her kommer et navn";
+        let place = "Her kommer et sted";
+        let food = "Her kommer matrett";
+
+        updateView();
+        function updateView(){
+        let html = `
+        <div class="container">
+            <div>Jeg heter..</div>
+            <div id="nameDiv">${name}</div>
+        </div>
+        <div class="container">
+            <div>Jeg kommer fra..</div>
+            <div id="placeDiv">${place}</div>
+        </div>
+        <div class="container">
+            <div>Jeg elsker å spise..</div>
+            <div id="foodDiv">${food}</div>
+        </div>
+    <button onclick="setFields()">Sett ny verdi</button>
+    <input type="text" placeholder="navn" onchange="setName(this.value)">
+    <input type="text" placeholder="sted" onchange="setPlace(this.value)">
+    <input type="text" placeholder="mat" onchange="setFood(this.value)">
+    `
+            document.getElementById("app").innerHTML = html;
+        }
+        fun
+        function setName(nameInput){
+            name = nameInput;
+            updateView();
+        }
+        function setPlace(placeInput){
+            place = placeInput;
+            updateView();
+        }
+        function setFood(foodInput){
+            food = foodInput;
+            updateView();
+        }
+        </script>
+</body>
+</html>

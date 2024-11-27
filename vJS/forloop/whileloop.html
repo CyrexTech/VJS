@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops</title>
+</head>
+<body>
+    <div>
+        <div id="display"></div>
+        <button onclick="multiplyBy2()">MultiplyBy2</button>
+        <div id="text">Arne er homofil</div>
+        <button onclick="getFirstWord()">GetFirstword</button>
+    </div>
+    <script>
+        function multiplyBy2(){
+            let number = 2;
+
+            while(number <= 100){
+                number = number * 2;
+                document.getElementById('display').innerHTML += number + ' ';
+            }
+                
+        }
+        function getFirstWord(){
+            
+        }
+    </script>
+</body>
+</html>
