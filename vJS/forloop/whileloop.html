@@ -9,21 +9,34 @@
     <div>
         <div id="display"></div>
         <button onclick="multiplyBy2()">MultiplyBy2</button>
-        <div id="text">Arne er homofil</div>
-        <button onclick="getFirstWord()">GetFirstword</button>
+        <div id="text"></div>
+        <button onclick="getFirstWord()">GetFirstWord</button>
     </div>
     <script>
         function multiplyBy2(){
             let number = 2;
 
             while(number <= 100){
-                number = number * 2;
+                number *= 2;
                 document.getElementById('display').innerHTML += number + ' ';
             }
                 
         }
         function getFirstWord(){
-            
+            let text = "Arne er homofil";
+            let seperator = '';
+            let firstWord = '';
+            let index = 0;
+
+            while (seperator !== ' '){
+                if(text.charAt(index) === ' '){
+                seperator = ' ';
+            }
+            firstWord += text.charAt(index);
+            index++;
+
+            document.getElementById('text').innerHTML += firstWord + ' ';
+        }
         }
     </script>
 </body>
