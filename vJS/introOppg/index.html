@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Introduksjon av meg</title>
+    <style>
+        #body {
+            background-color: #d9d8d8dd;
+        }
+        #container1 {
+            background-color: #ffffffdd;
+            color: black;
+            padding: 20px;
+            border: solid #ffffffdd 2px; 
+            border-radius: 20px;
+            margin: 50px;
+            width: 800px;
+            height: auto;
+        }
+        #bilde {
+            width: 500px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            align-items: flex-start;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div id="container1">
+    <h2>Introduksjon av meg</h2>
+    <hr>
+    <p>Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen. Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen. Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen. Jeg heter Joakim, Jeg er født og oppvokst i Fredrikstad. Ønsker å skape arbeidsmuligheter innenfor IT-bransjen.</p>
+          <hr>
+          <h2>Hobbyer</h2>
+          <br>
+          <ul>Lage og spise god mat.</ul>
+          <ul>Gjøre hyggelige ting med samboeren min.</ul>
+          <ul>Programmere</ul>
+          <ul>Utfordre meg selv innenfor ulike felt.</ul>
+          <img id="bilde" src="https://ociacc.com/wp-content/uploads/2019/03/blank-profile-picture-973460_1280-1030x1030.png">
+          <hr>
+          <button onclick="bgLight()" style="width: 100px; height: 40px; border-radius: 10px; background-color: chartreuse; box-shadow: 20px ;">Bright mode</button>
+          <button onclick="bgDark()" style="width: 100px; height: 40px; border-radius: 10px; background-color: chartreuse;">Dark mode</button>
+         </div>
+</body>
+</html>
+
+<script>
+    function bgLight(){
+        document.getElementById('body').style.backgroundColor = "#d9d8d8dd";
+        document.getElementById('container1').style.border = "solid #ffffffdd 2px"
+        document.getElementById('container1').style.backgroundColor = "#ffffffdd"
+        document.getElementById('container1').style.color = "black"
+    }
+    function bgDark(){
+        document.getElementById('body').style.backgroundColor = "#2e2e2e"
+        document.getElementById('container1').style.border = "solid #3b3b3b 2px"
+        document.getElementById('container1').style.backgroundColor = "#9b9b9b"
+        document.getElementById('container1').style.color = "white"
+    }
+</script>
+
+<!--        #container1 {
+            background-color: #3e3e3e;
+            color: #9a9a9a;
+            padding: 20px;
+            border: solid #2e2e2e 30px;
+            border-radius: 10px;
+            margin: 20px;
+            width: 500px;
+            height: auto;
+        } -->
+
+<!-- 
+en introduksjonstekst om deg,
+en liste som viser noen av hobbyene dine,
+et bilde av deg
+en knapp du kan trykke på som endrer bakgrunnsfarge på noe på nettsiden 
+-->

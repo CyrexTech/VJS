@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Setninger / Comparison Operatører</title>
+</head>
+<body>
+    <div id="output">
+
+    </div>
+<script>
+
+    // ==
+    // === SJEKKER OM TEXT ELLER TALL MÅ VÆRE FNUTTER FÅR Å SE ETTER TEKST
+    // != IKKE LIK
+    // !==
+    // <=
+    // >=
+    // <
+    // >
+
+    let a = 3;
+
+    // if(a === 30){
+    //     console.log('slår til')
+    //     printText();
+    // }
+    // if(a != 3){
+    //     alert('A er ikke 3')
+    // }
+    // if(a <= 5){
+    //     console.log('a er mindre eller lik 5')
+    // }
+
+    // if(a <=5 && a >= 0){
+    //     console.log("a er mellom 0 og 5")
+    // }
+    if(a == 2 || a == 4){
+        console.log('A er to eller 4')
+    }
+    else{
+        console.log('a er ikke 2 eller 4')
+    }
+
+    function printText(){
+        document.getElementById('output').innerHTML = 'ifSetning slo til';
+    }
+</script>
+</body>
+</html>
