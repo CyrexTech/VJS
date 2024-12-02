@@ -1,7 +1,13 @@
 function loggin(){
-    
+
+    //Alert dersom ikke feltene er fylt inn.
+    if (!model.input.logginView.username || !model.input.logginView.password) {
+        alert('Både brukernavn og passord må fylles ut!');
+        return;
+    }
+    //Sjekker om bruk
     let user = getUserByUserName(model.input.logginView.username);
-    if(user.password == model.input.logginView.password){
+    if(user && user.password == model.input.logginView.password){
         model.app.currentPage = 'mainPage';
         model.input.logginView.username = '';
         model.input.logginView.password = '';
@@ -9,8 +15,9 @@ function loggin(){
 
         updateView();
     }
+    //Alert dersom brukernavn eller passord er feil.
     else {
-        alert('Incorrect username or password')
+        alert('Feil brukernavn eller passord');
     }
 }
 

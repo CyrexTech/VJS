@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handlevogn</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #app {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .input-gruppe {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+
+            outline: none;
+            border-color: #1b2b57;
+        }
+
+        button {
+            background-color: #1b2b57;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #handleliste {
+            list-style: none;
+            padding: 0;
+        }
+
+        #handleliste li {
+            padding: 15px;
+            background-color: #f8f8f8;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        #handleliste li:hover {
+            background-color: #ffe6e6;
+        }
+
+        .tom-vogn {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        const app = document.getElementById('app');
+        const handleVogn = [];
+
+        view();
+        function view(){
+            let html = `
+                <h1>Min Handlevogn</h1>
+                <div class="input-gruppe">
+                    <input type="text" id="vareInput" placeholder="Skriv inn vare">
+                    <button onclick="leggTilVare()">Legg til</button>
+                </div>
+                <ul id="handleliste"></ul>
+            `;
+            app.innerHTML = html;
+            oppdaterListe();
+        }
+
+        function leggTilVare(){
+            const vareInput = document.getElementById('vareInput');
+            if(vareInput.value.trim() !== '') {
+                handleVogn.push(vareInput.value);
+                vareInput.value = '';
+                oppdaterListe();
+            }
+        }
+
+        function oppdaterListe(){
+            const handleliste = document.getElementById('handleliste');
+            let html = '';
+            
+            if (handleVogn.length === 0) {
+                html = '<div class="tom-vogn">Handlevognen er tom</div>';
+            } else {
+                for (let i = 0; i < handleVogn.length; i++){
+                    html += `
+                        <li onclick="fjernVare(${i})">
+                            ${handleVogn[i]}
+                            <span style="color: #999; font-size: 14px;">(Klikk for å fjerne)</span>
+                        </li>`;
+                }
+            }
+            handleliste.innerHTML = html;
+        }
+
+        function fjernVare(index){
+            handleVogn.splice(index, 1);
+            oppdaterListe();
+        }
+
+        // Legg til mulighet for å trykke Enter for å legge til vare
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                leggTilVare();
+            }
+        });
+    </script>
+</body>
+</html>
