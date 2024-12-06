@@ -1,5 +1,5 @@
 body {
-    background-color: #09cb33;
+    background-color: #414740;
     color: antiquewhite;
     margin: 0;
     min-height: 100vh;
@@ -10,25 +10,25 @@ body {
 button {
     background-color: #eee;
     border: none;
-    padding: 1rem;
-    font-size: 1rem;
-    width: 10em;
-    border-radius: 1rem;
-    color: lightcoral;
-    box-shadow: 0 0.4rem #dfd9d9;
+    padding: 16px;
+    font-size: 16px;
+    width: 100px;
+    border-radius: 16px;
+    color: rgb(5, 17, 58);
+    box-shadow: 0 9.6px #dfd9d9;
     cursor: pointer;
    }
    
    button:active {
-    color: white;
-    box-shadow: 0 0.2rem #dfd9d9;
+    color: rgb(24, 24, 24);
+    box-shadow: 0 3.2px #dfd9d9;
     transform: translateY(0.2rem);
    }
    
    button:hover:not(:disabled) {
-    background: lightcoral;
+    background: rgb(35, 32, 64);
     color: white;
-    text-shadow: 0 0.1rem #bcb4b4;
+    text-shadow: 0 1.6px #bcb4b4;
    }
    
    button:disabled {
@@ -49,12 +49,6 @@ text-align: center;
 display: flex;
 flex-direction: column;
 align-items: center;  
-}
-.mamaGlockChi:hover {
-background-color: #6e015a;
-box-shadow: 0 8px 32px #ff00d0;
-color: chartreuse;
-transition: 0.5s;
 
 }
 #justachillguy {
