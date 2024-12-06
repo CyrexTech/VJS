@@ -1,57 +1,42 @@
-let hunger = 100;
-let happiness = 100;
-let cleanliness = 100;
+// Starter verdier for kjæledyrets stats
+let hunger = 100; // Hvor sulten kjæledyret er, fra 0 til 100
+let happiness = 100; // Hvor glad kjæledyret er, fra 0 til 100
+let cleanliness = 100; // Hvor rent kjæledyret er, fra 0 til 100
 
+// Definerer ulike tilstander kjæledyret kan være i, med tilhørende bilder
 const states = {
-    NORMAL: 'Assets/95c.png',
-    ANGRY: 'Assets/95c-gun.png',
-    DEADLY: 'Assets/95c-redeyes-gun.png',
-    MUZZLEFLASH: 'Assets/95c-Muzzleflash.png',
-    HUNGRY: 'Assets/95c-rolling.png',
-    HAPPY: 'Assets/95c-rolling-smoking.png',
-    CONTENT: 'Assets/95c-smokedup.png',
+    NORMAL: 'Assets/95c.png', // Normal tilstand
+    ANGRY: 'Assets/95c-gun.png', // Sint tilstand
+    DEADLY: 'Assets/95c-redeyes-gun.png', // Dødelig tilstand
+    MUZZLEFLASH: 'Assets/95c-Muzzleflash.png', // Skyter tilstand
+    HUNGRY: 'Assets/95c-rolling.png', // Sulten tilstand
+    HAPPY: 'Assets/95c-rolling-smoking.png', // Glad tilstand
+    CONTENT: 'Assets/95c-smokedup.png', // Fornøyd tilstand
 };
 
+// Setter standardbilde for kjæledyret når spillet starter
 document.getElementById('justachillguy').src = states.HAPPY;
 
+// Funksjon for å oppdatere kjæledyrets humør basert på dets stats
 function updateMood() {
     const pet = document.getElementById('justachillguy');
 
-    if (hunger < 3.5 || happiness < 3.5 || cleanliness < 3.5) {
-        pet.src = states.MUZZLEFLASH;
-        return;
+    // Endrer bildet basert på hvor lave verdiene for hunger, happiness og cleanliness er
+    if (hunger < 5 || happiness < 5 || cleanliness < 5) {
+        pet.src = states.MUZZLEFLASH; // Kritisk tilstand
+    } else if (hunger < 20 || happiness < 20 || cleanliness < 20) {
+        pet.src = states.DEADLY; // Veldig dårlig tilstand
+    } else if (hunger < 30 || happiness < 30 || cleanliness < 30) {
+        pet.src = states.ANGRY; // Sint tilstand
+    } else if (hunger <= 50) {
+        pet.src = states.HUNGRY; // Sulten tilstand
+    } else if (hunger >= 80 && happiness >= 80 && cleanliness >= 80) {
+        pet.src = states.HAPPY; // Veldig glad tilstand
+    } else if (hunger >= 50 && happiness >= 50 && cleanliness >= 50) {
+        pet.src = states.CONTENT; // Fornøyd tilstand
+    } else {
+        pet.src = states.NORMAL; // Standard tilstand
     }
-    
-    if (hunger < 20 || happiness < 20 || cleanliness < 20) {
-        pet.src = states.DEADLY;
-        return;
-    }
-    
-    if (hunger < 30 || happiness < 30 || cleanliness < 30) {
-        pet.src = states.ANGRY;
-        return;
-    }
-    
-    if (hunger <= 50) {
-        pet.src = states.HUNGRY;
-        return;
-    }
-    
-    if (hunger >= 80 && happiness >= 80 && cleanliness >= 80) {
-        pet.src = states.HAPPY;
-        return;
-    }
-    
-    if (hunger >= 50 && happiness >= 50 && cleanliness >= 50) {
-        pet.src = states.CONTENT;
-        return;
-    }
-        if (hunger >= 50 && happiness >= 50 && cleanliness >= 50) {
-        pet.src = states.CONTENT;
-        return;
-    }
-    
-    pet.src = states.NORMAL;
 }
 
 function updateStats() {
@@ -66,7 +51,6 @@ function updateStats() {
     if (hunger <= 0 || happiness <= 0 || cleanliness <= 0) {
         alert('Boom! Du er død. Jeg flytter til en annen eier.');
         gameOver();
-        return;
     }
     
     updateMood();
@@ -76,20 +60,21 @@ let gameInterval;
 let isGameRunning = true;
 
 function startGame() {
-    hunger = 100;
+    hunger =  100;
     happiness = 100;
     cleanliness = 100;
     
     gameInterval = setInterval(() => {
 
-        hunger -=2;
-        happiness -=1.5;
-        cleanliness -=1;
+        hunger = Math.max(0, hunger - 2);
+        happiness = Math.max(0, happiness -1.5);
+        cleanliness = Math.max(0, cleanliness - 1);
         
         updateStats();
         
-        if (hunger <= 0 && happiness <= 0 && cleanliness <= 0) {
+        if (hunger <= 0 || happiness <= 0 || cleanliness <= 0) {
             gameOver();
+            return;
         }
     }, 750); 
     

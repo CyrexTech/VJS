@@ -1,86 +1,97 @@
 <html>
   <head>
-    <title>Tamagotchi</title>
+    <title>TamaGlockChill</title>
     <style>
-        body {
-            background-color: #09cb33;
-            color: antiquewhite;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        button {
-            background-color: aqua;
-            border-radius: 100%;
-            width: 75px;
-            height: 75px;
-        }
+body {
+    background-color: #414740;
+    color: antiquewhite;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    background-color: #eee;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    width: 100px;
+    border-radius: 16px;
+    color: rgb(5, 17, 58);
+    box-shadow: 0 9.6px #dfd9d9;
+    cursor: pointer;
+   }
+   
+   button:active {
+    color: rgb(24, 24, 24);
+    box-shadow: 0 3.2px #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   button:hover:not(:disabled) {
+    background: rgb(35, 32, 64);
+    color: white;
+    text-shadow: 0 1.6px #bcb4b4;
+   }
+   
+   button:disabled {
+    cursor: auto;
+    color: grey;
+   }
 
-        button:hover {
-            background-color: yellowgreen;
-            color: greenyellow;
-            transition: 0.2s;
-        }
+.mamaGlockChi {
+background: #FFFFFF1A;
+padding: 30px;
+border: 2px solid #FFFFFF33;
+width: 450px;
+zoom: 80%;
+margin: 20px;
+border-radius: 20px;
+box-shadow: 0 8px 32px #00000044;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;  
 
-        .mamaGlockChi {
-        background: #FFFFFF1A;
-        padding: 30px;
-        border: 2px solid #FFFFFF33;
-        width: 450px;
-        margin: 20px;
-        border-radius: 20px;
-        box-shadow: 0 8px 32px #00000044;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;  
-      }
-      .mamaGlockChi:hover {
-        background-color: #6e015a;
-        box-shadow: 0 8px 32px #ff00d0;
-        color: chartreuse;
-        transition: 0.5s;
+}
+#justachillguy {
+height: 220px;
+width: auto;
+}
+.progress-bar {
+background: #FFFFFF1A;
+height: 25px;
+border-radius: 12px;
+margin: 15px 0;
+overflow: hidden;
+width: 100%;
+}
 
-      }
-      #justachillguy {
-        height: 220px;
-        width: auto;
-      }
-        .progress-bar {
-        background: #FFFFFF1A;
-        height: 25px;
-        border-radius: 12px;
-        margin: 15px 0;
-        overflow: hidden;
-        width: 100%;
-      }
+.progress {
+height: 100%;
+transition: width 1.4s ease;
+}
 
-      .progress {
-        height: 100%;
-        transition: width 1.4s ease;
-      }
+#hunger-bar {
+background: red;
+height: 100%;
+}
 
-      #hunger-bar {
-        background: red;
-        height: 100%;
-      }
+#happiness-bar {
+background: yellow;
+height: 100%;
+}
 
-      #happiness-bar {
-        background: yellow;
-        height: 100%;
-      }
-
-      #cleanliness-bar {
-        background: green;
-        height: 100%;
-      }
+#cleanliness-bar {
+background: green;
+height: 100%;
+}
     </style>
   </head>
   <body onload="startGame()">
     <div class="mamaGlockChi" style="display: flex;">
-      <h2>TamaPotGlockChill</h2>
+      <h2>TamaGlockChill</h2>
       <div id="copyright-display">© Copyrighted by Team 3 2024 ©</div>
       <div id="pet-display">
         <img src="assets/95c-gun.png" id="justachillguy">
